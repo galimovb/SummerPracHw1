@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.itis.summerpractic.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_settingFragment"
+            app:destination="@id/settingFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/mainFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_cameraFragment2"
+            app:destination="@id/cameraFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_phoneFragment2"
+            app:destination="@id/phoneFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_defaultFragment"
+            app:destination="@id/defaultFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.itis.summerpractic.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_cameraFragment2"
+            app:destination="@id/cameraFragment2" />
+        <action
+            android:id="@+id/action_profileFragment_to_defaultFragment"
+            app:destination="@id/defaultFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.itis.summerpractic.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingFragment_to_defaultFragment"
+            app:destination="@id/defaultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment2"
+        android:name="com.itis.summerpractic.CameraFragment"
+        android:label="CameraFragment"
+        tools:layout="@layout/fragment_camera" >
+        <action
+            android:id="@+id/action_cameraFragment2_to_defaultFragment"
+            app:destination="@id/defaultFragment" />
+        <action
+            android:id="@+id/action_cameraFragment2_to_phoneFragment"
+            app:destination="@id/phoneFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/phoneFragment"
+        android:name="com.itis.summerpractic.PhoneFragment"
+        android:label="PhoneFragment"
+        tools:layout="@layout/fragment_phone" >
+        <action
+            android:id="@+id/action_phoneFragment2_to_defaultFragment"
+            app:destination="@id/defaultFragment" />
+        <action
+            android:id="@+id/action_phoneFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_phoneFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/defaultFragment"
+        android:name="com.itis.summerpractic.DefaultFragment"
+        android:label="DefaultFragment"
+        tools:layout="@layout/fragment_default" >
+        <action
+            android:id="@+id/action_defaultFragment_to_phoneFragment"
+            app:destination="@id/phoneFragment" />
+        <action
+            android:id="@+id/action_defaultFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_defaultFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+
+
+</navigation>
