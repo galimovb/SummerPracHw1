@@ -17,7 +17,7 @@ class PhoneFragment : Fragment(R.layout.fragment_phone) {
         binding?.run {
             btnToDefault.setOnClickListener {
                 val className = this@PhoneFragment.javaClass.simpleName
-                findNavController().navigate(R.id.action_phoneFragment2_to_defaultFragment)
+                findNavController().navigate(R.id.action_phoneFragment_to_defaultFragment)
                 Snackbar.make(view, "Переход из $className в   default фрагмент", Snackbar.LENGTH_SHORT).show()
             }
 
