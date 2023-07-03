@@ -13,28 +13,21 @@
         <action
             android:id="@+id/action_mainFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_settingFragment"
-            app:destination="@id/settingFragment" />
     </fragment>
-
-
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.itis.summerpractic.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
-
-
-    <fragment
-        android:id="@+id/settingFragment"
-        android:name="com.itis.summerpractic.SettingsFragment"
-        android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" >
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile" >
         <action
-            android:id="@+id/action_settingFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            android:id="@+id/action_profileFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.itis.summerpractic.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
 
 
 </navigation>
